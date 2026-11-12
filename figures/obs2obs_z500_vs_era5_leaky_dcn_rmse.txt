@@ -1,0 +1,46 @@
+# z500 obs2obs vs ERA5, init 2024-01-29 12 UTC, run /glade/derecho/scratch/idavis/obs2obs_swe/runs_next_version/e2e_cyc3_dcn-afwide-down4x4_kellerMuon (/glade/derecho/scratch/idavis/obs2obs_swe/runs_next_version/e2e_cyc3_dcn-afwide-down4x4_kellerMuon/best.pt)
+# rollout: cycle_rollout (standard decode-and-re-encode, target-window network)
+# RMSE/bias: cos(lat)-weighted over 20-90N on the ERA5 1.5 deg grid (obs2obs bilinear to it), m
+# fc = forecast (lead 0 = the raw analysis latent decoded: not a trained output of a --w_ana 0 run, shown for completeness only); persist = ERA5(t0) vs ERA5(t); sonde = forecast vs observed radiosonde 500 hPa heights (all reports in the window, m)
+lead_h  rmse_fc  bias_fc  rmse_persist  rmse_sonde  n_sonde
+     0     63.9    -52.6           0.0         nan        0
+     6     10.8     +2.7          24.0         8.1       21
+    12     10.7     +1.5          41.8         9.4      520
+    18     11.1     +1.4          55.4         9.6       20
+    24     13.3     +2.4          66.3        17.0      474
+    30     14.9     +0.1          74.9        11.9       23
+    36     16.4     -0.6          84.2        15.1      519
+    42     17.3     -0.2          92.6        14.9       21
+    48     19.7     -0.4         100.9        22.3      446
+    54     22.7     -2.1         106.6        15.5       13
+    60     25.1     -2.2         113.4        23.9      481
+    66     26.8     -2.9         118.3        15.7       19
+    72     28.5     -3.1         124.1        27.3      457
+    78     31.0     -4.2         126.4        19.8       16
+    84     32.7     -4.6         130.6        30.0      518
+    90     33.7     -5.1         132.9        24.2       22
+    96     35.7     -4.4         137.7        34.9      452
+   102     37.4     -5.8         140.7        31.8       12
+   108     37.9     -5.8         147.6        35.3      516
+   114     38.3     -5.1         152.8        33.9       16
+   120     39.3     -3.7         158.6        38.2      473
+   126     41.2     -5.9         162.5        33.0       21
+   132     43.5     -5.7         168.9        38.7      524
+   138     46.9     -6.1         172.9        43.8       17
+   144     49.9     -5.5         177.0        48.6      485
+   150     53.0     -6.4         178.7        72.4       14
+   156     54.8     -5.8         180.9        49.7      490
+   162     56.6     -5.8         180.6        47.6       19
+   168     57.2     -5.4         179.8        53.4      503
+   174     56.8     -7.4         177.3        30.0       15
+   180     54.2     -8.5         177.6        49.6      481
+   186     52.2     -8.9         177.0        24.1       22
+   192     51.7     -9.0         177.0        47.4      477
+   198     54.0    -11.6         176.9        41.5       15
+   204     57.7    -11.1         177.8        47.2      554
+   210     63.5    -11.2         178.4        41.2       22
+   216     67.5    -11.4         177.9        58.8      461
+   222     69.0    -11.7         177.2        48.8       15
+   228     67.6    -11.4         176.6        61.2      484
+   234     65.5    -12.4         176.4        49.7       21
+   240     63.0    -10.9         174.7        61.9      491
