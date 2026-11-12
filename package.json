@@ -1,0 +1,19 @@
+{
+  "name": "smoothsfno-talk",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md --base ./",
+    "export": "slidev export slides.md",
+    "deploy": "./deploy.sh"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^53.0.0"
+  },
+  "dependencies": {
+    "slidev-theme-cu-boulder": "github:JValdivia23/slidev-theme-cu-boulder"
+  },
+  "overrides": {
+    "floating-vue": "5.2.2"
+  }
+}
